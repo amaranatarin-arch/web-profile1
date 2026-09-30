@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amara Dwi Natarin | Web Profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- CSS AOS (sesuai dokumentasi) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* WARNA & FONT TEMA */
+    :root{
+      --cream:#FFF8EE;
+      --cream-2:#FBEFDD;
+      --pink-soft:#FCE4EC;
+      --pink:#F4A6BC;
+      --pink-deep:#C94F7C;
+      --ink:#4A2C33;
+      --bs-body-bg:var(--cream);
+      --bs-body-color:var(--ink);
+      --bs-body-font-family:'DM Sans',sans-serif;
+    }
+    body{overflow-x:hidden} /* mencegah geser samping akibat animasi fade-left/right */
+    h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+    html{scroll-behavior:smooth}
+    section{scroll-margin-top:90px}
+    .text-pink{color:var(--pink-deep)}
+    .muted{color:#7A5A62}
+    .btn-pink{background:var(--pink-deep);color:#fff;border:0}
+    .btn-pink:hover{background:#B03F6A;color:#fff}
+    .btn-soft{background:var(--pink-soft);color:var(--pink-deep);border:0}
+    .btn-soft:hover{background:var(--pink);color:var(--ink)}
+    .form-control:focus{border-color:var(--pink);box-shadow:0 0 0 .25rem rgba(244,166,188,.35)}
+    .form-check-input:checked{background-color:var(--pink-deep);border-color:var(--pink-deep)}
+    .nav-link{color:var(--ink);font-weight:500}
+    .nav-link:hover{color:var(--pink-deep)}
+
+    /* Foto lengkung + hiasan */
+    .arch{border-radius:999px 999px 28px 28px;object-fit:cover;aspect-ratio:3/4;width:100%;max-width:340px}
+    .blob{position:absolute;border-radius:50%;z-index:0}
+
+    /* Galeri portofolio: judul muncul saat kursor di atas gambar */
+    .shot{position:relative;overflow:hidden;border-radius:22px;background:var(--pink-soft)}
+    .shot img{width:100%;height:100%;object-fit:cover;display:block}
+    .shot .cap{position:absolute;inset:0;display:flex;align-items:flex-end;padding:1rem;color:#fff;font-weight:700;background:linear-gradient(to top,rgba(201,79,124,.85),transparent 60%);opacity:0;transition:opacity .3s}
+    .shot:hover .cap{opacity:1}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md fixed-top mt-3">
+  <div class="container">
+    <div class="w-100 d-flex flex-wrap align-items-center justify-content-between rounded-pill px-4 py-2 shadow-sm" style="background:rgba(255,255,255,.85);backdrop-filter:blur(10px)">
+      <a class="navbar-brand serif fw-bold m-0 text-pink" href="#home">Amara</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav gap-md-3 py-2 py-md-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" style="padding:140px 0 90px;overflow:hidden">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
+        <p class="fs-5 muted mb-2" data-aos="fade-right">Selamat datang di profil saya</p>
+        <h1 class="display-3 fw-bold lh-1 mb-3" data-aos="fade-right" data-aos-delay="150">Amara<br><span class="text-pink fst-italic">Dwi Natarin</span></h1>
+        <p class="fs-4 fw-semibold text-pink mb-2" data-aos="fade-right" data-aos-delay="250">Desain Interior</p>
+        <p class="fs-5 muted mb-4" data-aos="fade-right" data-aos-delay="300" style="max-width:480px">Menata ruang agar terasa hangat, rapi, dan sesuai kepribadian penghuninya, dari konsep sampai ruangan siap dihuni.</p>
+        <div class="d-flex gap-3 align-items-center justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="450">
+          <a href="#portofolio" class="btn btn-pink btn-lg rounded-pill px-4">Lihat karya saya</a>
+          <a href="#contact" class="fs-3 text-pink" aria-label="Kirim pesan"><i class="bi bi-envelope-heart"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 d-flex justify-content-center">
+        <div class="position-relative" style="padding:0 20px" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="blob" style="width:170px;height:170px;background:var(--pink);top:-20px;right:-10px;opacity:.7"></div>
+          <div class="blob" style="width:110px;height:110px;background:var(--cream-2);bottom:20px;left:-10px;border:3px solid var(--pink)"></div>
+          <img src="img/foto-saya.jpg" alt="Foto Amara"
+               class="arch shadow-lg border border-5 border-white position-relative" style="z-index:1">
+              
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5" style="background:var(--pink-soft)">
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <h2 class="display-6 fw-bold mb-4 text-center" data-aos="fade-down">About Me</h2>
+
+        <p data-aos="fade-up">
+          Halo, saya Amara Dwi Natarin, seorang desainer interior yang senang menata ruang hunian, kafe, dan kantor. Bagi saya, interior yang baik bukan hanya enak dilihat, tetapi juga terasa nyaman dipakai setiap hari dan mencerminkan karakter pemiliknya.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="100">
+          Saya mengerjakan proyek mulai dari diskusi kebutuhan, pembuatan moodboard, denah tata letak, visual 3D, sampai pemilihan material, furnitur, dan pencahayaan. Dengan begitu, klien bisa membayangkan hasil akhirnya sejak awal dan ikut menentukan pilihannya.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="100">
+          Saya menyukai warna lembut, bahan alami seperti kayu dan rotan, serta ruang yang tidak berlebihan. Menurut saya, ruangan yang rapi dan lapang membuat penghuninya lebih tenang, jadi setiap sudut saya rancang agar punya fungsi yang jelas.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="100">
+          Saat ini saya terus belajar tren desain dan teknik visualisasi terbaru. Saya terbuka untuk kolaborasi, proyek freelance, maupun kesempatan magang. Silakan lihat karya saya di bawah, lalu hubungi saya untuk berdiskusi.
+        </p>
+
+        <!-- Keahlian -->
+        <div class="d-flex flex-wrap gap-2 justify-content-center mt-4">
+          <span class="badge rounded-pill bg-white text-pink border px-3 py-2 fw-medium" data-aos="zoom-in" data-aos-delay="0">SketchUp</span>
+          <span class="badge rounded-pill bg-white text-pink border px-3 py-2 fw-medium" data-aos="zoom-in" data-aos-delay="100">AutoCAD</span>
+          <span class="badge rounded-pill bg-white text-pink border px-3 py-2 fw-medium" data-aos="zoom-in" data-aos-delay="200">3ds Max</span>
+          <span class="badge rounded-pill bg-white text-pink border px-3 py-2 fw-medium" data-aos="zoom-in" data-aos-delay="300">Moodboard</span>
+          <span class="badge rounded-pill bg-white text-pink border px-3 py-2 fw-medium" data-aos="zoom-in" data-aos-delay="400">Styling Ruang</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section> 
+
+<!-- PORTOFOLIO -->
+<section id="portofolio" class="py-5">
+  <div class="container py-4">
+    <h2 class="display-6 fw-bold text-center mb-2" data-aos="fade-down">Portofolio</h2>
+    <p class="text-center muted mb-5" data-aos="fade-up">Beberapa ruangan yang pernah saya rancang</p>
+    <div class="row g-3">
+      <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="0">
+        <div class="shot" style="aspect-ratio:16/10"><img src="img/fasad skandinavian.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/id/250/800/500'" alt="Fasad Skandinavian"><div class="cap">Fasad Skandinavian</div></div>
+      </div>
+      <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="shot" style="aspect-ratio:16/10"><img src="img/ruang tamu skandinavian.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/id/260/800/500'" alt="Ruang Tamu Skandinavian"><div class="cap">Ruang Tamu Skandinavian</div></div>
+      </div>
+      <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="0">
+        <div class="shot" style="aspect-ratio:16/10"><img src="img/kamar tidur skandinavian.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/id/270/800/500'" alt="Kamar Tidur Skandinavian"><div class="cap">Kamar Tidur Skandinavian</div></div>
+      </div>
+      <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="shot" style="aspect-ratio:16/10"><img src="img/dapur skandinavian.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/id/280/800/500'" alt="Dapur Skandinavian"><div class="cap">Dapur Skandinavian</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="py-5" style="background:var(--cream-2)">
+  <div class="container py-4">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 text-center text-lg-start" data-aos="fade-right">
+        <h2 class="display-6 fw-bold mb-3">Contact</h2>
+        <p class="muted fs-5">Ingin merancang ulang rumah atau ruang usaha Anda? Isi form di samping dan saya akan menghubungi Anda secepatnya.</p>
+        <i class="bi bi-chat-heart-fill text-pink d-none d-lg-block" style="font-size:5rem;opacity:.5"></i>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="bg-white rounded-5 shadow p-4 p-md-5">
+          <form onsubmit="event.preventDefault(); alert('Pesan terkirim. Terima kasih!'); this.reset();">
+            <div class="mb-3">
+              <label for="email" class="form-label fw-medium">Email address</label>
+              <input type="email" class="form-control form-control-lg rounded-4" id="email" placeholder="nama@contoh.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="nama" class="form-label fw-medium">Name</label>
+              <input type="text" class="form-control form-control-lg rounded-4" id="nama" required>
+            </div>
+            <div class="mb-3">
+              <span class="d-block fw-medium mb-1">Gender</span>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" checked>
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female">
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="alamat" class="form-label fw-medium">Address</label>
+              <textarea class="form-control form-control-lg rounded-4" id="alamat" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-pink rounded-pill px-4">Submit</button>
+            <button type="reset" class="btn btn-soft rounded-pill px-4">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-4" style="background:var(--pink)" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+  <small>Created with <span style="color:var(--pink-deep)">&hearts;</span> by Amara Dwi Natarin 2026 Alright Reserved.</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS AOS (sesuai dokumentasi) -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+</body>
+</html>
